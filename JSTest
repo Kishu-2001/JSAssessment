@@ -37,13 +37,15 @@ function listNFTs() {
     console.log("Eye Color: \t " + nfts[i].eyeColor);
     console.log("Shirt Type: " + nfts[i].shirtType);
     console.log("Bling: \t\t" + nfts[i].bling);
+    console.log("..................");
     }
 }  
 
 // print the total number of NFTs we have minted to the console
 function getTotalSupply() {
-   console.log("\n" + nfts.length)
+    return nfts.length;
 }
+  
   
 // call your functions below this line
 mintNFT("Krishma", "Blue", "T-shirt", "Diamond");
@@ -51,5 +53,6 @@ mintNFT("Kishu", "Green", "Hoodie", "Gold");
 mintNFT("Kishu-2001", "Red", "Tank Top", "Platinum");
 mintNFT("Krish", "Blue", "T-shirt", "Diamond");
 listNFTs();
-getTotalSupply();
 
+const totalSupply = getTotalSupply();
+console.log("Total NFTs created: " + totalSupply);
